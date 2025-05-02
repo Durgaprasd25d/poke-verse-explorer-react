@@ -1,73 +1,114 @@
-# Welcome to your Lovable project
 
-## Project info
+# Pokémon Explorer
 
-**URL**: https://lovable.dev/projects/1efc6967-ae38-4da9-9308-11767322099b
+![Pokémon Explorer](https://img.shields.io/badge/Pok%C3%A9mon-Explorer-red)
 
-## How can I edit this code?
+An interactive React web application that allows users to explore the first 150 Pokémon from the original Pokédex. Users can search for Pokémon by name or ID, filter by type, and view details for each Pokémon.
 
-There are several ways of editing your application.
+![Pokémon Explorer Screenshot](https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png)
 
-**Use Lovable**
+## Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1efc6967-ae38-4da9-9308-11767322099b) and start prompting.
+- **Browse Pokémon**: View a responsive grid of the first 150 Pokémon with their images, types, and IDs
+- **Search**: Search Pokémon by name or ID number
+- **Filter**: Filter Pokémon by their types (fire, water, grass, etc.)
+- **Responsive Design**: Fully responsive interface that works on mobile, tablet, and desktop devices
+- **Loading States**: Visual feedback during data loading
+- **Error Handling**: Graceful handling of API errors and empty states
 
-Changes made via Lovable will be committed automatically to this repo.
+## Technologies Used
 
-**Use your preferred IDE**
+- **React**: Frontend library for building user interfaces
+- **TypeScript**: Type-safe JavaScript for more robust code
+- **Tailwind CSS**: Utility-first CSS framework for styling
+- **PokeAPI**: RESTful API for Pokémon data
+- **Vite**: Next generation frontend tooling
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
 
-Follow these steps:
+- Node.js (v14.0.0 or later)
+- npm or yarn
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Installation
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+1. Clone the repository
+   ```sh
+   git clone <repository-url>
+   cd pokemon-explorer
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+2. Install dependencies
+   ```sh
+   npm install
+   # or
+   yarn
+   ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+3. Start the development server
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:8080`
+
+## Project Structure
+
+```
+pokemon-explorer/
+├── public/             # Static assets
+├── src/
+│   ├── components/     # React components
+│   │   ├── Header.tsx
+│   │   ├── PokemonCard.tsx
+│   │   ├── TypeFilter.tsx
+│   │   ├── Loader.tsx
+│   │   └── EmptyState.tsx
+│   ├── services/       # API services
+│   │   └── pokemonService.ts
+│   ├── pages/          # Page components
+│   │   └── Index.tsx
+│   ├── App.tsx         # Main App component
+│   ├── main.tsx        # Entry point
+│   └── index.css       # Global styles
+├── index.html          # HTML template
+└── package.json        # Dependencies and scripts
 ```
 
-**Edit a file directly in GitHub**
+## API Reference
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+This project uses the [PokeAPI](https://pokeapi.co/) for fetching Pokémon data:
 
-**Use GitHub Codespaces**
+- `GET /api/v2/pokemon?limit=150` - Get the first 150 Pokémon
+- `GET /api/v2/pokemon/{id or name}` - Get details for a specific Pokémon
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Performance Optimizations
 
-## What technologies are used for this project?
+The application implements several performance optimizations:
 
-This project is built with:
+- Data fetching with caching to reduce API calls
+- Lazy loading of images for faster initial load times
+- Memoization of filtered results using React's useMemo
+- Modern build tooling with Vite for fast development and optimized production builds
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Best Practices Implemented
 
-## How can I deploy this project?
+- Semantic HTML for accessibility
+- Responsive design (mobile-first approach)
+- Proper state management with React Hooks
+- Type safety with TypeScript
+- Error handling and loading states
+- Component composition and reusability
 
-Simply open [Lovable](https://lovable.dev/projects/1efc6967-ae38-4da9-9308-11767322099b) and click on Share -> Publish.
+## License
 
-## Can I connect a custom domain to my Lovable project?
+This project is for educational purposes only. Pokémon is a registered trademark of Nintendo, Game Freak, and Creatures Inc.
 
-Yes, you can!
+## Acknowledgments
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- [PokeAPI](https://pokeapi.co/) for providing the Pokémon data
+- [React](https://reactjs.org/) for the frontend framework
+- [Tailwind CSS](https://tailwindcss.com/) for styling
