@@ -15,12 +15,15 @@ An interactive React web application that allows users to explore the first 150 
 - **Responsive Design**: Fully responsive interface that works on mobile, tablet, and desktop devices
 - **Loading States**: Visual feedback during data loading
 - **Error Handling**: Graceful handling of API errors and empty states
+- **Pagination**: Easily navigate through pages of Pokémon
+- **GSAP Animations**: Smooth, modern animations throughout the interface
 
 ## Technologies Used
 
 - **React**: Frontend library for building user interfaces
 - **TypeScript**: Type-safe JavaScript for more robust code
 - **Tailwind CSS**: Utility-first CSS framework for styling
+- **GSAP**: Animation library for modern interactions
 - **PokeAPI**: RESTful API for Pokémon data
 - **Vite**: Next generation frontend tooling
 
@@ -69,6 +72,8 @@ pokemon-explorer/
 │   │   └── EmptyState.tsx
 │   ├── services/       # API services
 │   │   └── pokemonService.ts
+│   ├── hooks/          # Custom React hooks
+│   │   └── use-gsap.tsx
 │   ├── pages/          # Page components
 │   │   └── Index.tsx
 │   ├── App.tsx         # Main App component
@@ -102,6 +107,7 @@ The application implements several performance optimizations:
 - Type safety with TypeScript
 - Error handling and loading states
 - Component composition and reusability
+- GSAP animations for modern UI experience
 
 ## License
 
@@ -112,3 +118,4 @@ This project is for educational purposes only. Pokémon is a registered trademar
 - [PokeAPI](https://pokeapi.co/) for providing the Pokémon data
 - [React](https://reactjs.org/) for the frontend framework
 - [Tailwind CSS](https://tailwindcss.com/) for styling
+- [GSAP](https://greensock.com/gsap/) for animations
